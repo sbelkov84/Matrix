@@ -105,7 +105,7 @@ TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
   ((Matrix[100][100] = 314) = 0) = 217;
-  auto A = Matrix[100][100];
+  auto A = Matrix[100][100].Value;
 
   EXPECT_EQ(A, 217); 
 }
