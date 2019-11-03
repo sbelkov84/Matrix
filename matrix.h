@@ -110,7 +110,7 @@ struct TMatrix
   TMatrix<T, Default, Dimens>* Parent;
   int Index;
 
-  TMatrix<T, Default, Dimens>& operator [](int Index)
+  TMatrix<T, Default, Dimens>& operator [](int Ind)
   {
     try
     {
@@ -122,19 +122,19 @@ struct TMatrix
       std::cout << ExcptStr << std::endl;
     }
 
-    auto It = Storage.find(Index);
+    auto It = Storage.find(Ind);
 
     if (It == Storage.end())
     {
-      Storage.insert(std::pair<int, TMatrix<T, Default, Dimens>> {Index, TMatrix<T, Default, Dimens>(CurDim - 1, this)});
-      Storage[Index].Index = Index;
+      Storage[Ind] = TMatrix<T, Default, Dimens>(CurDim - 1, this);
+      Storage[Ind].Index = Ind;
     }
 
-    return Storage[Index];
+    return Storage[Ind];
   }
   //---
 
-  TMatrix<T, Default, Dimens>& operator =(T&& Rhs)
+  TMatrix<T, Default, Dimens>& operator =(const T& Rhs)
   {
     if (Rhs == Default)
     {
@@ -227,7 +227,7 @@ std::ostream& operator <<(std::ostream& OStream, TMatrix<T, Default, Dimens>& Ma
   OStream << Matrix.Value;
   //---
   return OStream;
-}
+};
 //------------------------------------------------------------------------
 
 #endif // MATRIX_H
