@@ -136,8 +136,11 @@ struct TMatrix
 
   TMatrix<T, Default, Dimens>& operator =(const T& Rhs)
   {
+    TMatrix<T, Default, Dimens>& Result = *this;
+
     if (Rhs == Default)
     {
+      Result = *Parent;
       auto It = Parent->Storage.find(Index);
       if (It != Parent->Storage.end())
         Parent->Storage.erase(It);
@@ -146,7 +149,7 @@ struct TMatrix
     this->Value = Rhs;
     this->IsEmpty = false;
     //---
-    return *this;
+    return Result;
   }
   //---
 
