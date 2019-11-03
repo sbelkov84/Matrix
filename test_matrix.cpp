@@ -46,7 +46,7 @@ TEST(Matrix, OnRangedFor)
     int y;
     int z;
     std::tie(x, y, z) = c;
-    std::cout << x << y << v << std::endl;
+    std::cout << x << y << z << std::endl;
   }
   
   Printed = testing::internal::GetCapturedStdout();
