@@ -54,7 +54,7 @@ TEST(Matrix, OnRangedFor)
   EXPECT_EQ(Printed, (std::string) "100100314");   
 }
 //------------------------------------------------------------------------
-*/
+
 TEST(Matrix, OnSize)
 {
   TMatrix<int, -1> Matrix;
@@ -100,7 +100,7 @@ TEST(Matrix, OnDimensionExceeded)
   EXPECT_EQ(Printed, (std::string) "Matrix dimension was exceeded"); 
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
