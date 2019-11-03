@@ -25,7 +25,8 @@ TEST(Matrix, On10x10)
   {
     for (std::size_t j = 0; j < 10; ++j)
     {
-      EXPECT_EQ(Matrix[i][j], Value);
+      auto A = Matrix[i][j].Value;
+      EXPECT_EQ(A, Value);
       ++Value;
     }
   }  
@@ -81,7 +82,7 @@ TEST(Matrix, On_3_Dimension)
 {
   TMatrix<int, -1, 3> Matrix;
   Matrix[0][1][2] = 123;
-  auto A = Matrix[0][1][2];
+  auto A = Matrix[0][1][2].Value;
 
   EXPECT_EQ(A, 123); 
 
@@ -104,8 +105,9 @@ TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
   ((Matrix[100][100] = 314) = 0) = 217;
+  auto A = Matrix[100][100];
 
-  EXPECT_EQ(Matrix[100][100], 217); 
+  EXPECT_EQ(A, 217); 
 }
 //------------------------------------------------------------------------
 
