@@ -88,7 +88,7 @@ TEST(Matrix, On_3_Dimension)
 
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnDimensionExceeded)
 {
   std::string Printed;
@@ -100,7 +100,7 @@ TEST(Matrix, OnDimensionExceeded)
   EXPECT_EQ(Printed, (std::string) "Matrix dimension was exceeded"); 
 }
 //------------------------------------------------------------------------
-*/
+
 TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
