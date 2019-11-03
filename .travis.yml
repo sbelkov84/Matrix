@@ -1,0 +1,28 @@
+language: cpp
+before_script:
+- echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+- sudo apt install doxygen -y
+- sudo apt install graphviz -y
+script:
+- doxygen Doxyfile
+- cmake .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
+deploy:
+- provider: pages
+  skip_cleanup: true
+  local_dir: help/html
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
+- provider: script
+  skip_cleanup: true
+  on: 
+    branch: master
+  script:
+  - curl -T Matrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -usbelkov84:$BINTRAY_API_KEY "https://api.bintray.com/content/sbelkov84/Matrix/Matrix/$TRAVIS_BUILD_NUMBER/Matrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+
