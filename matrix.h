@@ -227,7 +227,7 @@ std::ostream& operator <<(std::ostream& OStream, TMatrix<T, Default, Dimens>& Ma
   OStream << Matrix.Value;
   //---
   return OStream;
-};
+}
 //------------------------------------------------------------------------
 
 #endif // MATRIX_H
