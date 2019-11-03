@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 //------------------------------------------------------------------------
-
+/*
 TEST(Matrix, On10x10)
 {
   std::vector<std::string> Printed;
@@ -32,7 +32,7 @@ TEST(Matrix, On10x10)
   }  
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnRangedFor)
 {
   std::string Printed;
