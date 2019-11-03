@@ -32,7 +32,7 @@ TEST(Matrix, On10x10)
   }  
 }
 //------------------------------------------------------------------------
-*/
+
 TEST(Matrix, OnRangedFor)
 {
   std::string Printed;
@@ -54,7 +54,7 @@ TEST(Matrix, OnRangedFor)
   EXPECT_EQ(Printed, (std::string) "100100314");   
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnSize)
 {
   TMatrix<int, -1> Matrix;
