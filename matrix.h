@@ -154,7 +154,7 @@ struct TMatrix
   /*! int Index */
   int Index;
 
-  /*! \brief This operator returns sub-TMatrix corresponding to Index */
+  /*! \brief This operator returns sub-TMatrix corresponding to Index. Uses lazy initialization */
   /*! TMatrix<T, Default, Dimens>& operator [](int Ind) */
   TMatrix<T, Default, Dimens>& operator [](int Ind)
   {
