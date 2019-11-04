@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Iterator-class impementation for <a class="el" href="../../db/d46/struct_t_matrix.html" title="TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix&#39;es. Depth of inclusion depends on dime...">TMatrix</a>.  
+ <a href="../../d5/d9d/class_t_matrix_iterator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../dd/df4/matrix_8h_source.html">matrix.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for TMatrixIterator&lt; T, Default, Dim &gt;:</div>
@@ -104,20 +107,31 @@ Collaboration diagram for TMatrixIterator&lt; T, Default, Dim &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9e3b0068b07147adc789bfe49dec53b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#ad9e3b0068b07147adc789bfe49dec53b">TMatrixIterator</a> (<a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix</a>&lt; T, Default, Dim &gt; *<a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a4897f1dcb564f59b37bd12db0a12d123">Current</a>)</td></tr>
+<tr class="memdesc:ad9e3b0068b07147adc789bfe49dec53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a constructor.  <a href="#ad9e3b0068b07147adc789bfe49dec53b">More...</a><br /></td></tr>
 <tr class="separator:ad9e3b0068b07147adc789bfe49dec53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc8321191d613cb35fd86c94dd98fec"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a4fc8321191d613cb35fd86c94dd98fec">operator*</a> ()</td></tr>
+<tr class="memdesc:a4fc8321191d613cb35fd86c94dd98fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">In this operator we make from Iterator on matrix-element std::tuple with all indicies and value of this element.  <a href="#a4fc8321191d613cb35fd86c94dd98fec">More...</a><br /></td></tr>
 <tr class="separator:a4fc8321191d613cb35fd86c94dd98fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85adc3b34d2a1f9b7aa43e30473b4e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html">TMatrixIterator</a>&lt; T, Default, Dim &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#ad85adc3b34d2a1f9b7aa43e30473b4e2">operator++</a> ()</td></tr>
+<tr class="memdesc:ad85adc3b34d2a1f9b7aa43e30473b4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">In this operator we go to the next matrix element. If element's Value equals to Default, we would go and check next matrix element.  <a href="#ad85adc3b34d2a1f9b7aa43e30473b4e2">More...</a><br /></td></tr>
 <tr class="separator:ad85adc3b34d2a1f9b7aa43e30473b4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08cf529422efd5933bf27a7c7aa90806"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a08cf529422efd5933bf27a7c7aa90806">operator!=</a> (const <a class="el" href="../../d5/d9d/class_t_matrix_iterator.html">TMatrixIterator</a>&lt; T, Default, Dim &gt; &amp;Rhs)</td></tr>
+<tr class="memdesc:a08cf529422efd5933bf27a7c7aa90806"><td class="mdescLeft">&#160;</td><td class="mdescRight">In this operator we check matrix element iterator on inequality.  <a href="#a08cf529422efd5933bf27a7c7aa90806">More...</a><br /></td></tr>
 <tr class="separator:a08cf529422efd5933bf27a7c7aa90806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4897f1dcb564f59b37bd12db0a12d123"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix</a>&lt; T, Default, Dim &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a4897f1dcb564f59b37bd12db0a12d123">Current</a></td></tr>
+<tr class="memdesc:a4897f1dcb564f59b37bd12db0a12d123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to current matrix-element or map-of-elements(/maps)  <a href="#a4897f1dcb564f59b37bd12db0a12d123">More...</a><br /></td></tr>
 <tr class="separator:a4897f1dcb564f59b37bd12db0a12d123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T, T Default, std::size_t Dim&gt;<br />
+class TMatrixIterator&lt; T, Default, Dim &gt;</h3>
+
+<p>Iterator-class impementation for <a class="el" href="../../db/d46/struct_t_matrix.html" title="TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix&#39;es. Depth of inclusion depends on dime...">TMatrix</a>. </p>
+<p>class <a class="el" href="../../d5/d9d/class_t_matrix_iterator.html" title="Iterator-class impementation for TMatrix. ">TMatrixIterator</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad9e3b0068b07147adc789bfe49dec53b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -141,6 +155,9 @@ template&lt;typename T, T Default, std::size_t Dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Just a constructor. </p>
+<p><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#ad9e3b0068b07147adc789bfe49dec53b" title="Just a constructor. ">TMatrixIterator(TMatrix&lt;T, Default, Dim&gt;* Current)</a> </p>
 
 </div>
 </div>
@@ -169,6 +186,9 @@ template&lt;typename T, T Default, std::size_t Dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>In this operator we check matrix element iterator on inequality. </p>
+<p>bool <a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a08cf529422efd5933bf27a7c7aa90806" title="In this operator we check matrix element iterator on inequality. ">operator !=(const TMatrixIterator&lt;T, Default, Dim&gt;&amp; Rhs)</a> </p>
+
 </div>
 </div>
 <a class="anchor" id="a4fc8321191d613cb35fd86c94dd98fec"></a>
@@ -193,6 +213,19 @@ template&lt;typename T, T Default, std::size_t Dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>In this operator we make from Iterator on matrix-element std::tuple with all indicies and value of this element. </p>
+<p>const auto <a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#a4fc8321191d613cb35fd86c94dd98fec" title="In this operator we make from Iterator on matrix-element std::tuple with all indicies and value of th...">operator *()</a> </p>
+<p>Array of element's indicies</p>
+<p>std::array&lt;int, Dim&gt; IndArr;</p>
+<p>Local index to fill IndArr from last to first elements</p>
+<p>int Index</p>
+<p>Local pointer to current matrix-element or map-of-elements(/maps)</p>
+<p><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix&lt;T, Default, Dim&gt;</a>* TmpCurrent</p>
+<p>Local variable to store Value of matrix element</p>
+<p>T Value</p>
+<p>Result of function's working</p>
+<p>auto Res </p>
 
 </div>
 </div>
@@ -219,6 +252,13 @@ template&lt;typename T, T Default, std::size_t Dim&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>In this operator we go to the next matrix element. If element's Value equals to Default, we would go and check next matrix element. </p>
+<p>TMatrixIterator&lt;T, Default, Dim&gt;&amp; <a class="el" href="../../d5/d9d/class_t_matrix_iterator.html#ad85adc3b34d2a1f9b7aa43e30473b4e2" title="In this operator we go to the next matrix element. If element&#39;s Value equals to Default, we would go and check next matrix element. ">operator ++()</a> </p>
+<p>Result of function's working. Initialized with nullptr</p>
+<p>TMatrixIterator&lt;T, Default, Dim&gt; Result</p>
+<p>Pointer to matrix-map, which includes necessary element or sub-map(s) with this element</p>
+<p><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix&lt;T, Default, Dim&gt;</a>* ResMatr </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -241,6 +281,9 @@ template&lt;typename T, T Default, std::size_t Dim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pointer to current matrix-element or map-of-elements(/maps) </p>
+<p><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix&lt;T, Default, Dim&gt;</a>* Current </p>
 
 </div>
 </div>

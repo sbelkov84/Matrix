@@ -90,8 +90,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for matrix.h:</div>
@@ -115,22 +113,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix&lt; T, Default, Dimens &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix'es. Depth of inclusion depends on dimension (variable Dimens)  <a href="../../db/d46/struct_t_matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_t_matrix_iterator.html">TMatrixIterator&lt; T, Default, Dim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator-class impementation for <a class="el" href="../../db/d46/struct_t_matrix.html" title="TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix&#39;es. Depth of inclusion depends on dime...">TMatrix</a>.  <a href="../../d5/d9d/class_t_matrix_iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix&lt; T, Default, Dimens &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix'es. Depth of inclusion depends on dimension (variable Dimens)  <a href="../../db/d46/struct_t_matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa75ea75e0cd3c04e491083b083143daf"><td class="memTemplParams" colspan="2">template&lt;typename TArr , std::size_t... I, typename U &gt; </td></tr>
 <tr class="memitem:aa75ea75e0cd3c04e491083b083143daf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df4/matrix_8h.html#aa75ea75e0cd3c04e491083b083143daf">ArrToTupleImpl</a> (const TArr &amp;Arr, std::index_sequence&lt; I... &gt;, U &amp;Value)</td></tr>
+<tr class="memdesc:aa75ea75e0cd3c04e491083b083143daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes tuple from array of indicies of matrix element and value of element.  <a href="#aa75ea75e0cd3c04e491083b083143daf">More...</a><br /></td></tr>
 <tr class="separator:aa75ea75e0cd3c04e491083b083143daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158033306101cda3550412c781a5b90f"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t N, typename Indicies  = std::make_index_sequence&lt;N&gt;, typename U &gt; </td></tr>
 <tr class="memitem:a158033306101cda3550412c781a5b90f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df4/matrix_8h.html#a158033306101cda3550412c781a5b90f">ArrToTuple</a> (const std::array&lt; T, N &gt; &amp;Arr, U &amp;Value)</td></tr>
+<tr class="memdesc:a158033306101cda3550412c781a5b90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry function to prepare std::array&lt;T, N&gt; of matrix element indicies for ArrToTupleImpl-function.  <a href="#a158033306101cda3550412c781a5b90f">More...</a><br /></td></tr>
 <tr class="separator:a158033306101cda3550412c781a5b90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7916ca79a90f0d32a0529b88f97f044"><td class="memTemplParams" colspan="2">template&lt;typename T , T Default, std::size_t Dimens&gt; </td></tr>
 <tr class="memitem:aa7916ca79a90f0d32a0529b88f97f044"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df4/matrix_8h.html#aa7916ca79a90f0d32a0529b88f97f044">operator&lt;&lt;</a> (std::ostream &amp;OStream, <a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix</a>&lt; T, Default, Dimens &gt; &amp;Matrix)</td></tr>
+<tr class="memdesc:aa7916ca79a90f0d32a0529b88f97f044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator to print out <a class="el" href="../../db/d46/struct_t_matrix.html" title="TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix&#39;es. Depth of inclusion depends on dime...">TMatrix</a> element.  <a href="#aa7916ca79a90f0d32a0529b88f97f044">More...</a><br /></td></tr>
 <tr class="separator:aa7916ca79a90f0d32a0529b88f97f044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -159,6 +163,9 @@ template&lt;typename T , std::size_t N, typename Indicies  = std::make_index_seq
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Entry function to prepare std::array&lt;T, N&gt; of matrix element indicies for ArrToTupleImpl-function. </p>
+<p>auto <a class="el" href="../../dd/df4/matrix_8h.html#a158033306101cda3550412c781a5b90f" title="Entry function to prepare std::array&lt;T, N&gt; of matrix element indicies for ArrToTupleImpl-function. ">ArrToTuple(const std::array&lt;T, N&gt;&amp; Arr, U&amp; Value)</a> </p>
 
 </div>
 </div>
@@ -194,6 +201,9 @@ template&lt;typename TArr , std::size_t... I, typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Makes tuple from array of indicies of matrix element and value of element. </p>
+<p>auto ArrToTupleImpl(const TArr&amp; Arr, std::index_sequence&lt;I...&gt;, U&amp; Value) </p>
+
 </div>
 </div>
 <a class="anchor" id="aa7916ca79a90f0d32a0529b88f97f044"></a>
@@ -221,6 +231,9 @@ template&lt;typename T , T Default, std::size_t Dimens&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Operator to print out <a class="el" href="../../db/d46/struct_t_matrix.html" title="TMatrix-struct. Main struct. Includes std::maps of sub-TMatrix&#39;es. Depth of inclusion depends on dime...">TMatrix</a> element. </p>
+<p>std::ostream&amp; <a class="el" href="../../dd/df4/matrix_8h.html#aa7916ca79a90f0d32a0529b88f97f044" title="Operator to print out TMatrix element. ">operator &lt;&lt;(std::ostream&amp; OStream, TMatrix&lt;T, Default, Dimens&gt;&amp; Matrix)</a> </p>
 
 </div>
 </div>
