@@ -47,6 +47,7 @@ TEST(Matrix, OnRangedFor)
     int y;
     int z;
     std::tie(x, y, z) = c;
+    std::cout << x << y << z;
   }
   
   Printed = testing::internal::GetCapturedStdout();
@@ -86,7 +87,7 @@ TEST(Matrix, On_3_Dimension)
   EXPECT_EQ(A, 123); 
 }
 //------------------------------------------------------------------------
-/*
+
 TEST(Matrix, OnDimensionExceeded)
 {
   std::string Printed;
@@ -98,7 +99,7 @@ TEST(Matrix, OnDimensionExceeded)
   EXPECT_EQ(Printed, (std::string) "Matrix dimension was exceeded"); 
 }
 //------------------------------------------------------------------------
-*/
+
 TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
