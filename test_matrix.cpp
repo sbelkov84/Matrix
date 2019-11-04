@@ -54,7 +54,7 @@ TEST(Matrix, OnRangedFor)
   EXPECT_EQ(Printed, (std::string) "100100314");   
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnSize)
 {
   TMatrix<int, -1> Matrix;
@@ -88,7 +88,7 @@ TEST(Matrix, On_3_Dimension)
 
 }
 //------------------------------------------------------------------------
-
+/*
 TEST(Matrix, OnDimensionExceeded)
 {
   std::string Printed;
