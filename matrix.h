@@ -119,7 +119,7 @@ struct TMatrix
     }
     catch (const char* ExcptStr)
     {
-      std::cout << ExcptStr << std::endl;
+      std::cout << ExcptStr;
     }
 
     auto It = Storage.find(Ind);
