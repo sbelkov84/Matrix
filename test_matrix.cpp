@@ -84,10 +84,9 @@ TEST(Matrix, On_3_Dimension)
   auto A = Matrix[0][1][2].Value;
 
   EXPECT_EQ(A, 123); 
-
 }
 //------------------------------------------------------------------------
-
+/*
 TEST(Matrix, OnDimensionExceeded)
 {
   std::string Printed;
@@ -99,7 +98,7 @@ TEST(Matrix, OnDimensionExceeded)
   EXPECT_EQ(Printed, (std::string) "Matrix dimension was exceeded"); 
 }
 //------------------------------------------------------------------------
-
+*/
 TEST(Matrix, OnClassicAssignOperator)
 {
   TMatrix<int, -1> Matrix;
