@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acf5a6aaeaded035d6d1e896618c4fe40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Is used to create sub-TMatrix'es.  <a href="#acf5a6aaeaded035d6d1e896618c4fe40">More...</a><br /></td></tr>
 <tr class="separator:acf5a6aaeaded035d6d1e896618c4fe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a896b47374b599c68ed86b7156f8c2ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix</a>&lt; T, Default, Dimens &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/struct_t_matrix.html#a896b47374b599c68ed86b7156f8c2ff8">operator[]</a> (int Ind)</td></tr>
-<tr class="memdesc:a896b47374b599c68ed86b7156f8c2ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This operator returns sub-TMatrix corresponding to Index.  <a href="#a896b47374b599c68ed86b7156f8c2ff8">More...</a><br /></td></tr>
+<tr class="memdesc:a896b47374b599c68ed86b7156f8c2ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This operator returns sub-TMatrix corresponding to Index. Uses lazy initialization.  <a href="#a896b47374b599c68ed86b7156f8c2ff8">More...</a><br /></td></tr>
 <tr class="separator:a896b47374b599c68ed86b7156f8c2ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dd435895468ec3bb2bede0f8703f77a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d46/struct_t_matrix.html">TMatrix</a>&lt; T, Default, Dimens &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d46/struct_t_matrix.html#a6dd435895468ec3bb2bede0f8703f77a">operator=</a> (const T &amp;Rhs)</td></tr>
 <tr class="memdesc:a6dd435895468ec3bb2bede0f8703f77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This operator assigns value to matrix element. If Rhs == Default: deletes element, recursive checks Parent-&gt;Storage(s), and if those became empty, deletes them.  <a href="#a6dd435895468ec3bb2bede0f8703f77a">More...</a><br /></td></tr>
@@ -389,8 +389,8 @@ template&lt;typename T, T Default, std::size_t Dimens&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This operator returns sub-TMatrix corresponding to Index. </p>
-<p>TMatrix&lt;T, Default, Dimens&gt;&amp; <a class="el" href="../../db/d46/struct_t_matrix.html#a896b47374b599c68ed86b7156f8c2ff8" title="This operator returns sub-TMatrix corresponding to Index. ">operator [](int Ind)</a> </p>
+<p>This operator returns sub-TMatrix corresponding to Index. Uses lazy initialization. </p>
+<p>TMatrix&lt;T, Default, Dimens&gt;&amp; <a class="el" href="../../db/d46/struct_t_matrix.html#a896b47374b599c68ed86b7156f8c2ff8" title="This operator returns sub-TMatrix corresponding to Index. Uses lazy initialization. ">operator [](int Ind)</a> </p>
 <p>Finding corresponding iterator in Storage's std::map</p>
 <p>auto It </p>
 
